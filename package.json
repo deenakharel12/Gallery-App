@@ -1,0 +1,12 @@
+{
+  "name": "gallery-app",
+  "version": "1.0.0",
+  "description": "Simple photo gallery for cloud computing exam",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build process needed for static site'"
+  },
+  "keywords": ["gallery", "html", "css", "javascript"],
+  "author": "Your Name",
+  "license": "MIT"
+}
