@@ -1,11 +1,41 @@
-// Sample gallery data
+// Sample gallery data with direct, reliable image URLs
 const galleryItems = [
-    { id: 1, category: 'nature', title: 'Mountain View', url: 'https://source.unsplash.com/random/600x400?mountain' },
-    { id: 2, category: 'tech', title: 'Modern Laptop', url: 'https://source.unsplash.com/random/600x400?laptop' },
-    { id: 3, category: 'art', title: 'Colorful Painting', url: 'https://source.unsplash.com/random/600x400?painting' },
-    { id: 4, category: 'nature', title: 'Serene Lake', url: 'https://source.unsplash.com/random/600x400?lake' },
-    { id: 5, category: 'tech', title: 'Smartphone', url: 'https://source.unsplash.com/random/600x400?smartphone' },
-    { id: 6, category: 'art', title: 'Urban Graffiti', url: 'https://source.unsplash.com/random/600x400?graffiti' },
+    { 
+        id: 1, 
+        category: 'nature', 
+        title: 'Mountain View', 
+        url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW58ZW58MHx8MHx8fDA%3D&w=1000&q=80' 
+    },
+    { 
+        id: 2, 
+        category: 'tech', 
+        title: 'Modern Laptop', 
+        url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80' 
+    },
+    { 
+        id: 3, 
+        category: 'art', 
+        title: 'Colorful Painting', 
+        url: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFpbnRpbmd8ZW58MHx8MHx8fDA%3D&w=1000&q=80' 
+    },
+    { 
+        id: 4, 
+        category: 'nature', 
+        title: 'Serene Lake', 
+        url: 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFrZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80' 
+    },
+    { 
+        id: 5, 
+        category: 'tech', 
+        title: 'Smartphone', 
+        url: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvbmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80' 
+    },
+    { 
+        id: 6, 
+        category: 'art', 
+        title: 'Urban Graffiti', 
+        url: 'https://images.unsplash.com/photo-1509909756405-bea988e16b77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JhZmZpdGl8ZW58MHx8MHx8fDA%3D&w=1000&q=80' 
+    },
 ];
 
 const galleryContainer = document.querySelector('.gallery-container');
@@ -19,7 +49,7 @@ function displayItems(items) {
         itemElement.classList.add('gallery-item');
         itemElement.setAttribute('data-category', item.category);
         itemElement.innerHTML = `
-            <img src="${item.url}" alt="${item.title}">
+            <img src="${item.url}" alt="${item.title}" loading="lazy">
             <div class="item-info">
                 <h3>${item.title}</h3>
                 <p>Category: <strong>${item.category}</strong></p>
